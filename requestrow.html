@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="draw()">
+  <canvas id="sketch" width="700" height="300">
+  </canvas>
+  <script>
+    function draw(){
+
+      var sketch = document.getElementById('sketch');
+
+    	var context = sketch.getContext("2d");
+
+      var ans = parseInt(prompt("how many circles you want cuz?"))
+
+      for(var i = ans ; i ; i = i + 1){
+        if (i < 6){
+          context.fillStyle = "#00ffff"
+          context.beginPath();
+          context.arc(100, 50 * i, 20, 0 , 2 * Math.PI, true);
+          context.closePath();
+          context.fill();
+      }else{
+
+      }
+      }
+    }
+    var ans = parseInt(prompt("how many circles you want cuz?"))
+    draw(ans)
+  </script>
+  </body>
+</html>
